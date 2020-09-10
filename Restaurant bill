@@ -1,0 +1,27 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract RestaurantBill{
+    
+    string restaurantName;
+    string addres;
+    int invoiceNumber;
+    string custumerName;
+    string items;
+    int amount;
+    
+    function RestaurantBill(string newRestaurantName,string newAddres,int newInvoiceNumber,string newCustomerName,string newItems,int newAmount)public{
+        
+        restaurantName = newRestaurantName;
+        addres = newAddres;
+        invoiceNumber = newInvoiceNumber;
+        items = newItems;
+        amount = newAmount;
+        
+        
+      }
+      function  getRestaurantBill()public view returns(string,string,int,string,string,int){
+          
+          return(restaurantName,addres,invoiceNumber,custumerName,items,amount);
+          
+      }
+}
